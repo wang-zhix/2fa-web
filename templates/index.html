@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret</title>
+</head>
+<body>
+    <h1>上传</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="username">用户名:</label>
+        <input type="text" name="username" required>
+        <br>
+        <label for="issuer">网站名:</label>
+        <input type="text" name="issuer" required>
+        <br>
+        <label for="secret">secret(直接填写，不上传二维码):</label>
+        <input type="text" name="secret" required>
+        <br>
+        <label for="file">选择二维码上传:</label>
+        <input type="file" name="file" accept="image/*" required>
+        <input type="submit" value="上传">
+    </form>
+    <br><br>
+    
+    <h1>读取</h1>
+    <form action="/download" method="post" enctype="multipart/form-data">
+        <label for="username">用户名:</label>
+        <input type="text" name="username" required>
+        <br>
+        <input type="submit" value="读取">
+    </form>
+</body>
+</html>
